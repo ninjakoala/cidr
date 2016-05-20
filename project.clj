@@ -6,7 +6,7 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]]
 
-  :profiles {:dev {:dependencies [[midje "1.6.3"]]
-                   :plugins [[lein-midje "3.1.3"]]}}
+  :profiles {:dev {:dependencies [[midje "1.8.3"]]
+                   :plugins [[lein-midje "3.2"]]}}
 
   :eastwood {:namespaces [:source-paths]})

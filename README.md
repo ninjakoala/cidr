@@ -1,6 +1,4 @@
-```clojure
-[com.ninjakoala/cidr "1.0.0"]
-```
+[![Clojars Project](https://img.shields.io/clojars/v/com.ninjakoala/cidr.svg)](https://clojars.org/com.ninjakoala/cidr) [![Build Status](https://travis-ci.org/ninjakoala/cidr.svg?branch=master)](https://travis-ci.org/ninjakoala/cidr)
 
 ```clojure
 (ns your.namespace

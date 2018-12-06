@@ -39,10 +39,14 @@
     (and (>= val low)
          (<= val high))))
 
+(defn str->int [s]
+  #?(:clj  (java.lang.Integer/parseInt s)
+     :cljs (js/parseInt s)))
+
 (defn- str->ip
   [s]
   (->> (str/split s #"[.]")
-       (mapv #(Integer/parseInt %))))
+       (mapv #(str->int %))))
 
 (defn- str->cidr
   [s]
@@ -50,7 +54,7 @@
         quads (str/split (first parts) #"[.]")
         quads (take 4 (apply conj quads ["0" "0" "0" "0"]))]
     (->> (conj (vec quads) (second parts))
-         (mapv #(Integer/parseInt %)))))
+         (mapv #(str->int %)))))
 
 (defn- ip->str
   [ip]

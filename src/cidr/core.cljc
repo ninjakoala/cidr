@@ -96,5 +96,7 @@
   [cidr-str-a cidr-str-b]
   (let [[min-a max-a] (apply cidr->ips (str->cidr cidr-str-a))
         [min-b max-b] (apply cidr->ips (str->cidr cidr-str-b))]
-    (or (and (>= min-a min-b) (>= min-b max-a))
-        (and (<= max-b max-a) (>= max-b min-a)))))
+    (or (<= min-a min-b max-a)
+        (<= min-b max-a max-b)
+        (<= min-a max-b max-a)
+        (<= min-b min-a max-b))))

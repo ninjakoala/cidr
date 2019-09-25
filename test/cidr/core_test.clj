@@ -33,7 +33,8 @@
 
 (deftest overlap?-test
   (testing "that working out whether two ranges overlap returns false when they don't overlap at all"
-    (is (not (overlap? "9.0.0.0/8" "10.0.0.0/8"))))
+    (is (not (overlap? "9.0.0.0/8" "10.0.0.0/8")))
+    (is (not (overlap? "10.0.0.0/8" "9.0.0.0/8"))))
 
   (testing "that working out whether two ranges overlap returns false when they don't overlap at all"
     (is (overlap? "10.0.0.255/30" "10.0.0.255/32")))

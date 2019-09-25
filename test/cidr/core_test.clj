@@ -37,7 +37,9 @@
     (is (not (overlap? "10.0.0.0/8" "9.0.0.0/8"))))
 
   (testing "that working out whether two ranges overlap returns false when they don't overlap at all"
-    (is (overlap? "10.0.0.255/30" "10.0.0.255/32")))
+    (is (overlap? "10.0.0.255/30" "10.0.0.255/32"))
+    (is (overlap? "10.0.0.255/21" "10.0.0.255/21"))
+    (is (overlap? "10.140.48.0/20" "10.140.48.0/20")))
 
   (testing "that working out whether two ranges overlap returns false when they don't overlap at all"
     (is (overlap? "10.0.0.2/30" "10.0.0.3/32"))))

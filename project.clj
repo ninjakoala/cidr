@@ -1,4 +1,4 @@
-(defproject com.ninjakoala/cidr "1.0.6"
+(defproject com.ninjakoala/cidr "1.0.7-SNAPSHOT"
   :description "Working with CIDR ranges"
   :url "https://github.com/ninjakoala/cidr"
   :license {:name "Eclipse Public License"

@@ -3,7 +3,7 @@
   :url "https://github.com/ninjakoala/cidr"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :profiles {:dev {:dependencies [[org.clojure/clojure "1.10.1"]]}}
+  :profiles {:dev {:dependencies [[org.clojure/clojure "1.11.1"]]}}
   :eastwood {:namespaces [:source-paths]}
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" "release"]
